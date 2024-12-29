@@ -1,16 +1,7 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
-})
+import { Footer, Header } from '@/widgets/layout'
+import { notoSansKr } from '@/lib/font'
 
 export const metadata: Metadata = {
     title: 'Eunsu Resume',
@@ -24,7 +15,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+            <body className={`${notoSansKr.className} antialiased`}>
+                <div className='min-h-screen bg-white'>
+                    <div className='max-w-screen-xl mx-auto'>{children}</div>
+                    <Footer />
+                </div>
+            </body>
         </html>
     )
 }

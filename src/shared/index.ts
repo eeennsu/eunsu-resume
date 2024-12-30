@@ -1,2 +1,2 @@
 export * from './section-title'
-export * from './badge'
+export * from './profile-item'

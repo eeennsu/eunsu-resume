@@ -3,7 +3,7 @@ import type { FC } from 'react'
 
 export const IntroduceWidget: FC = () => {
     return (
-        <section className='flex w-full'>
+        <section className='flex w-full max-md:flex-col max-md:gap-2'>
             <SectionTitle>Introduce</SectionTitle>
             <div className='flex flex-col gap-2 flex-grow'>
                 <div className='flex flex-col gap-5 break-keep'>

@@ -16,10 +16,10 @@ export const Header: FC<Props> = ({ isHeaderVisible }) => {
             )}
         >
             <div className='mx-auto px-6 py-4 flex justify-between items-center max-w-6xl'>
-                <p className='flex items-end gap-2'>
+                <div className='flex items-end gap-2'>
                     <h1 className='text-2xl text-gray-800 tracking-wide'>방은수</h1>
                     <span className='text-sm text-gray-700'>1999.01.21</span>
-                </p>
+                </div>
 
                 <Link
                     href='https://github.com/eeennsu'

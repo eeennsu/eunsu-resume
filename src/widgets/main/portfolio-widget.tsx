@@ -4,16 +4,15 @@ import type { FC } from 'react'
 
 export const PortfolioWidget: FC = () => {
     return (
-        <section className='flex w-full'>
+        <section className='flex w-full max-md:flex-col max-md:gap-2'>
             <SectionTitle>Portfolio</SectionTitle>
 
-            <div className='grid grid-cols-2 w-full'>
+            <div className='grid md:grid-cols-2 w-full'>
                 <PortfolioCard
                     name='Eunsutory'
                     descriptionList={['개인 회고 & 소개 블로그']}
                     githubLink='https://github.com/eeennsu/eunstory'
                     siteLink='https://eunstory.eunsu.kr/'
-                    isTopItem
                     tools={['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma']}
                 />
 
@@ -22,7 +21,6 @@ export const PortfolioWidget: FC = () => {
                     descriptionList={['아마존 웹 스크레핑 사이트']}
                     githubLink='https://github.com/eeennsu/scrama'
                     siteLink='https://eunstory.eunsu.kr/'
-                    isTopItem
                     tools={['Next.js', 'TypeScript', 'Tailwind CSS', 'cheerio']}
                 />
 

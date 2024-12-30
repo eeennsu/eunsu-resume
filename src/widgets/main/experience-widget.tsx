@@ -4,13 +4,14 @@ import { SectionTitle } from '@/shared'
 
 export const ExperienceWidget: FC = () => {
     return (
-        <section className='flex w-full'>
+        <section className='flex w-full max-md:flex-col max-md:gap-2'>
             <SectionTitle>Experience</SectionTitle>
-            <div className='flex flex-col gap-12 flex-grow'>
+            <div className='flex flex-col gap-8 md:gap-12 flex-grow'>
                 <div className='flex flex-col gap-0.5'>
-                    <p className='text-2xl'>2024.03.11 ~ 현재</p>
-                    <h3 className='text-3xl font-semibold'>
+                    <p className='text-xl md:text-2xl'>2024.03.11 ~ 현재</p>
+                    <h3 className='text-2xl md:text-3xl font-semibold'>
                         한국글로벌널리지네트웍 <span className='text-lg'>(주)</span>
+                        <br className='md:hidden' />
                         <span className='font-normal text-lg ml-1 text-gray-600'>(前 코딩허브, 24.05 인수합병)</span>
                     </h3>
                 </div>
@@ -88,7 +89,7 @@ export const ExperienceWidget: FC = () => {
                             '프로젝트 설계, 공통 레이아웃과 컴포넌트 구조화',
                             '강의 리스트, 마이페이지, 게시판, 퀴즈 페이지 개발',
                             '페이지 테스트를 위한 jest 도입',
-                            'tiptap을 이용한 텍스트 에디터 커스터마이징',
+                            'tiptap 라이브러리를 이용하여 텍스트 에디터 커스터마이징',
                             '증명서 등의 문서를 pdf로 발급할 수 있는 기능 개발',
                             '토스 페이먼츠와 연동한 결제 기능 도입',
                         ]}

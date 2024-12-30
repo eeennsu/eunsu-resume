@@ -3,14 +3,14 @@ import type { FC } from 'react'
 
 export const EducationWidget: FC = () => {
     return (
-        <section className='flex w-full'>
+        <section className='flex w-full max-md:flex-col max-md:gap-2'>
             <SectionTitle>Education</SectionTitle>
             <div className='flex flex-col gap-6'>
-                <div className='flex flex-col gap-0.5'>
-                    <p className='text-xl'>2022.03.02 ~ 2024.02.28</p>
-                    <h3 className='text-2xl font-medium'>
+                <div className='flex flex-col-reverse md:flex-col gap-0.5'>
+                    <p className='text-sm md:text-xl'>2022.03.02 ~ 2024.02.28</p>
+                    <h3 className='text-xl md:text-2xl font-medium'>
                         명지전문대학교
-                        <span className='font-normal text-lg ml-1 text-gray-600'>소프트웨어 콘텐츠학과</span>
+                        <span className='font-normal text-sm md:text-lg ml-1 text-gray-600'>소프트웨어 콘텐츠학과</span>
                     </h3>
                 </div>
                 <ul className='list-disc list-inside'>

@@ -1,7 +1,6 @@
-import { Badge } from '@/shared'
-import { Github } from 'lucide-react'
+import { Badge } from '@/shared/ui'
 import Link from 'next/link'
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface Props {
@@ -9,18 +8,22 @@ interface Props {
     descriptionList: string[]
     githubLink: string
     siteLink?: string
-    isTopItem?: boolean
     tools: string[]
 }
 
-export const PortfolioCard: FC<Props> = ({ name, descriptionList, githubLink, siteLink, isTopItem, tools }) => {
+export const PortfolioCard: FC<Props> = ({ name, descriptionList, githubLink, siteLink, tools }) => {
     return (
-        <div className={twMerge('flex flex-col gap-4 even:border-r-0 border-b border-r px-6', isTopItem ? 'pb-8' : 'py-8')}>
+        <div className={twMerge('flex flex-col gap-4 even:border-r-0 border-b border-r p-6')}>
             <div className='grid grid-cols-6 gap-2 border-gray-400'>
-                <h3 className='col-span-2 font-semibold text-gray-800 text-xl'>{name}</h3>
-                <ul className='w-full col-span-4 list-disc list-inside '>
+                <h3 className='col-span-3 md:col-span-2 font-semibold text-gray-800 text-lg md:text-xl'>{name}</h3>
+                <ul className='w-full col-span-3 md:col-span-4 list-disc list-inside '>
                     {descriptionList.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li
+                            key={index}
+                            className='max-md:text-sm'
+                        >
+                            {item}
+                        </li>
                     ))}
                     <li>
                         <Link

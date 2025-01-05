@@ -1,13 +1,27 @@
+import { IconType } from '@/shared';
+
 export const PROFILE = {
     name: '방은수',
     writeDay: '2025.01.05',
     birthDay: '1999.01.21',
-    email: 'xxx592@naver.com',
-    github: 'https://github.com/eeennsu',
-    blog: {
-        tech: 'https://velog.io/@diso592/posts',
-        retrospect: 'https://eunstory.eunsu.kr',
-    },
+    descriptions: [
+        {
+            type: 'email',
+            value: 'xxx592@naver.com',
+        },
+        {
+            type: 'github',
+            value: 'https://github.com/eeennsu',
+        },
+        {
+            type: 'blog',
+            value: 'https://velog.io/@diso592/posts (기술 블로그)',
+        },
+        {
+            type: 'blog',
+            value: 'https://eunstory.eunsu.kr (회고 블로그)',
+        },
+    ] as Array<{ type: IconType, value: string }>,
 }
 
 export const INTRODUCE = [

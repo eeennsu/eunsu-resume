@@ -2,8 +2,10 @@ import { Github, Mail, NotebookPen } from 'lucide-react'
 import Link from 'next/link'
 import type { FC, ReactNode } from 'react'
 
+export type IconType = 'email' | 'github' | 'blog'
+
 const Icon = {
-    mail: <Mail />,
+    email: <Mail />,
     github: <Github />,
     blog: <NotebookPen />,
 }

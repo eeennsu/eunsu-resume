@@ -10,8 +10,8 @@ export const SkillCard: FC<Props> = ({ name, detailList }) => {
         <div className='grid grid-cols-12 gap-2'>
             <h3 className='col-span-6 md:col-span-3 font-medium text-gray-600 text-lg md:text-xl'>{name}</h3>
             <ul className='w-full col-span-6 md:col-span-9 list-disc list-inside '>
-                {detailList.map((item, index) => (
-                    <li key={index}>{item}</li>
+                {detailList.map((item, i) => (
+                    <li key={i}>{item}</li>
                 ))}
             </ul>
         </div>

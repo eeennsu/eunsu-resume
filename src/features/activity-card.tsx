@@ -10,7 +10,7 @@ interface Props {
     doneList: string[]
 }
 
-export const ExperienceCard: FC<Props> = ({ title, startDate, endDate, estimatedDuration, description, doneList }) => {
+export const ActivityCard: FC<Props> = ({ title, startDate, endDate, estimatedDuration, description, doneList }) => {
     return (
         <div className='flex flex-col gap-3.5 last:border-none border-b border-slate-300 pb-8'>
             <div className='flex flex-col gap-0.5'>
@@ -26,8 +26,8 @@ export const ExperienceCard: FC<Props> = ({ title, startDate, endDate, estimated
                 <p className='text-gray-600 text-sm'>{description}</p>
             </div>
             <ul className='list-disc list-inside'>
-                {doneList.map((item, index) => (
-                    <li key={index}>{item}</li>
+                {doneList.map((item, i) => (
+                    <li key={i}>{item}</li>
                 ))}
             </ul>
         </div>

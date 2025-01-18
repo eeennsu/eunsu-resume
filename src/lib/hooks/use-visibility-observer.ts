@@ -15,22 +15,21 @@ export const useVisibilityObserver = <T extends HTMLElement = HTMLDivElement>(
     const elementRef = useRef<T>(null)
 
     useEffect(() => {
+        const targetElement = elementRef.current
+        if (!targetElement) return
+
         const observer = new IntersectionObserver(([entry]) => {
             if (entry) {
                 setIsVisible(!entry.isIntersecting)
             }
         }, observerOptions)
 
-        if (elementRef.current) {
-            observer.observe(elementRef.current)
-        }
+        observer.observe(targetElement)
 
         return () => {
-            if (elementRef.current) {
-                observer.unobserve(elementRef.current)
-            }
+            observer.unobserve(targetElement)
         }
-    })
+    }, [observerOptions])
 
     return [isVisible, elementRef]
 }

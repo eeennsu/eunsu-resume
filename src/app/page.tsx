@@ -19,7 +19,6 @@ const HomePage: FC = () => {
             <PortfolioWidget />
             <EducationWidget />
             <CertificationsWidget />
-            {/* <PortfolioWidget /> */}
         </main>
     )
 }

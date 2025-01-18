@@ -28,7 +28,7 @@ export const INTRODUCE = [
     '안녕하세요. 27세 1년차 주니어 프론트엔드 개발자 방은수입니다.',
     'React와 Next.js를 기반으로 웹사이트를 개발하고 있습니다. 주요 업무는, 디자이너로부터 화면 레이아웃을 받아 공용 컴포넌트 및 페이지를 구현하며, 백엔드와의 API 연동을 통해 필요한 기능을 개발 & 최적화를 하고 있습니다.',
     '업무를 진행하며 어떠한 개선점이나 문제점이 발생했을 때, 팀원들과 유연한 커뮤니케이션으로 해결하며 프로젝트를 높은 완성도로 마무리하는데 최선을 다하고자 합니다.',
-    '서비스 개발이란 결국 개발자와 비즈니스와의 원할한 소통이 핵심이라고 생각합니다. 능동적인 커뮤니케이션과 피드백을 통해 문제 해결과 비즈니스 성장을 위해 노력하고 있습니다. 이러한 점을 바탕으로 더 나은 개발자로서 성장하기 위해 항상 경험하고, 학습하며 성장해나갈 것입니다.',
+    '서비스 개발이란 결국 비즈니스와 개발자간의 원할한 소통이 핵심이라고 생각합니다. 적극적인 의견 교환과 넓은 자세로 받아들이는 피드백을 통해 문제 해결과 비즈니스 성장을 위해 노력하고 있습니다. 이러한 점들을 바탕으로 더 나은 개발자로서 성장하기 위해 항상 학습하고, 경험하며 업무를 수행할 것입니다.',
 ]
 
 export const EXPERIENCE = {
@@ -114,7 +114,7 @@ export const EXPERIENCE = {
 export const SKILL = [
     {
         category: 'Languages',
-        items: ['JavaScript (ES6+)', 'TypeScript', 'HTML / CSS', 'Java'],
+        items: ['JavaScript (ES6+)', 'TypeScript', 'HTML / CSS', 'Java', 'C#'],
     },
     {
         category: 'Libraries & Frameworks',
@@ -126,7 +126,7 @@ export const SKILL = [
     },
     {
         category: 'Tools',
-        items: ['VS Code', 'Git & GitHub', 'Notion', 'Figma'],
+        items: ['VS Code', 'Git & GitHub', 'Notion', 'Figma', 'Slack'],
     },
 ]
 

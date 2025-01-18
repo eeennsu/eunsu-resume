@@ -13,7 +13,7 @@ export const CertificationsWidget: FC = () => {
                     {CERTIFICATIONS.map((certification, index) => (
                         <li
                             key={index}
-                            className={twMerge(certification.isInProgress && 'text-gray-600')}
+                            className={twMerge(certification.isInProgress && 'opacity-50')}
                         >
                             {certification.title}
                             <span className='text-sm'>{certification.detail && ` (${certification.detail})`}</span>

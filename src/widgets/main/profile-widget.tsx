@@ -11,10 +11,6 @@ import { ResponseGitHubBranch } from '@/entity/github/github.types'
 export const ProfileWidget: FC = async () => {
     const branchResp = await fetchHandler<ResponseGitHubBranch>('/github/branch')
 
-    if (!branchResp) {
-        throw new Error('Failed to fetch branch data')
-    }
-
     const now = dayjs()
     const writeDay = dayjs(branchResp.commit.commit.author.date) || now.subtract(8, 'day')
 

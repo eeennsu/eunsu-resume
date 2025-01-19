@@ -11,8 +11,8 @@ import { ResponseGitHubBranch } from '@/entity/github/github.types'
 export const ProfileWidget: FC = async () => {
     const branchResp = await fetchHandler<ResponseGitHubBranch>('/github/branch')
 
-    const now = dayjs()
-    const writeDay = dayjs(branchResp.commit.commit.author.date) || now.subtract(8, 'day')
+    const now = dayjs().startOf('day')
+    const writeDay = dayjs(branchResp.commit.commit.author.date).startOf('day') || now.subtract(8, 'day')
 
     return (
         <section className='flex w-full gap-4 md:gap-[30px] pt-5 max-md:flex-col max-md:items-center'>
@@ -41,11 +41,17 @@ export const ProfileWidget: FC = async () => {
                     ))}
                 </div>
 
-                <div className='w-full flex items-center gap-3 text-xs max-md:justify-end'>
+                <div className='w-full flex items-center gap-3 text-xs max-md:justify-end group'>
                     Last Update
-                    <Badge variant='primary'>
+                    <Badge
+                        className='tracking-wide'
+                        variant='primary'
+                    >
                         {writeDay.format('YYYY-MM-DD')} (D + {now.diff(writeDay, 'day') || 'Day'})
                     </Badge>
+                    <span className='text-xs font-medium group-hover:opacity-100 opacity-0 transition-all'>
+                        Using by github api
+                    </span>
                 </div>
             </div>
         </section>

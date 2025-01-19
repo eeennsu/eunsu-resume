@@ -19,17 +19,13 @@ export const fetchHandler = async <T extends Record<string, any>>(url: string, o
         const isServer = typeof window === 'undefined'
         const apiUrl = isServer ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/api${url}` : `/api${url}`
 
-        console.log('apiUrl', apiUrl)
-
         const response = await fetch(apiUrl, options)
 
         if (response.ok) {
             return response.json() as Promise<T>
         }
 
-        console.log('response', response)
-
-        return { statusText: response.statusText } as any
+        return { statusText: response.statusText } as unknown as T
     } catch (error) {
         console.log(error)
         throw error

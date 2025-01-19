@@ -49,7 +49,7 @@ export default function RootLayout({
         <html lang='ko'>
             <body className={`${notoSansKr.className} antialiased`}>
                 <div className='min-h-screen bg-white'>
-                    <div className='max-w-screen-xl mx-auto'>{children}</div>
+                    <div className='max-w-screen-xl mx-auto px-3 xl:px-0'>{children}</div>
                     <Footer />
                 </div>
             </body>

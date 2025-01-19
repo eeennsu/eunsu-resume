@@ -11,7 +11,7 @@ import { FC } from 'react'
 
 const HomePage: FC = () => {
     return (
-        <main className='flex flex-col gap-10 md:gap-20 max-md:px-3'>
+        <main className='flex flex-col gap-14 md:gap-20'>
             <ProfileWidget />
             <IntroduceWidget />
             <ExperienceWidget />

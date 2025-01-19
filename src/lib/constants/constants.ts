@@ -118,11 +118,22 @@ export const SKILL = [
     },
     {
         category: 'Libraries & Frameworks',
-        items: ['React.js (vite)', 'Next.js', 'Tailwind CSS', 'Prisma', 'Node.js', 'Express'],
+        items: [
+            'React.js (vite)',
+            'Next.js',
+            'Tailwind CSS',
+            'Emotion',
+            'Shadcn',
+            'Zustand',
+            'Recoil',
+            'Prisma',
+            'Node.js',
+            'Express',
+        ],
     },
     {
         category: 'Databases & DevOps',
-        items: ['MongoDB', 'Supabase (postgresql)', 'Docker', 'AWS S3'],
+        items: ['MongoDB', 'Supabase (postgresql)', 'Docker', 'AWS S3', 'Vercel', 'Netlify'],
     },
     {
         category: 'Tools',

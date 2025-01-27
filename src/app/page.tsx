@@ -9,7 +9,7 @@ import {
 } from '@/widgets/main'
 import { FC } from 'react'
 
-const HomePage: FC = () => {
+const HomePage: FC = async () => {
     return (
         <main className='flex flex-col gap-14 md:gap-16'>
             <ProfileWidget />
@@ -23,6 +23,6 @@ const HomePage: FC = () => {
     )
 }
 
-// export const dynamic = 'force-dynamic'
-
 export default HomePage
+
+export const dynamic = 'force-dynamic'

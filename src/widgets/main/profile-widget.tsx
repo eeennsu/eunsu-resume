@@ -1,12 +1,12 @@
 import { type FC } from 'react'
-import { Badge } from '@/shared/ui'
+import { Badge } from '@/shared/common'
 import { ProfileItem } from '@/shared'
 import { PROFILE } from '@/lib/constants'
 import { ProfileHeader } from '@/features/profile-header'
 import { fetchHandler } from '@/lib/api/next-api'
+import { ResponseGitHubBranch } from '@/entity/github'
 import Image from 'next/image'
 import dayjs from 'dayjs'
-import { ResponseGitHubBranch } from '@/entity/github/github.types'
 
 export const ProfileWidget: FC = async () => {
     const branchResp = await fetchHandler<ResponseGitHubBranch>('/github/branch')

@@ -11,7 +11,7 @@ export const ExperienceWidget: FC = () => {
                 {Object.values(EXPERIENCE).map((experience) => (
                     <div
                         key={experience.company}
-                        className='flex flex-col gap-6'
+                        className='flex flex-col gap-7'
                     >
                         <div className='flex flex-col gap-0.5'>
                             <p className='text-xl md:text-2xl'>{experience.startDate} ~ 현재</p>
@@ -23,8 +23,6 @@ export const ExperienceWidget: FC = () => {
                                 key={i}
                                 startDate={activity.startDate}
                                 endDate={activity.endDate}
-                                estimatedDuration={activity.estimatedDuration}
-                                description={activity.description}
                                 title={activity.title}
                                 doneList={activity.doneList}
                             />

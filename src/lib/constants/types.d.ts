@@ -1,0 +1,14 @@
+type ExperienceType = {
+    company: string
+    startDate: string
+    activities: Array<{
+        startDate: string
+        endDate?: string
+        estimatedDuration?: number
+        title: string
+        doneList: Array<{
+            subject: string
+            details?: Array<string | { problem: string; solution: string }>
+        }>
+    }>
+}

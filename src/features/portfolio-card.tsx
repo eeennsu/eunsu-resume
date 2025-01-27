@@ -1,7 +1,7 @@
-import { Badge } from '@/shared/ui'
-import Link from 'next/link'
+import { Badge } from '@/shared/common'
 import { FC } from 'react'
 import { twMerge } from 'tailwind-merge'
+import Link from 'next/link'
 
 interface Props {
     name: string

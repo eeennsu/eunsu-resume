@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Footer } from '@/widgets/layout'
 import { notoSansKr } from '@/lib/font'
 import { SITE_URL } from '@/lib/constants'
-import './globals.css'
+import '@/lib/css/globals.css'
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='ko'>
-            <body className={`${notoSansKr.className} antialiased`}>
+            <body className={`${notoSansKr.className} antialiased `}>
                 <div className='min-h-screen bg-white'>
                     <div className='max-w-screen-xl mx-auto px-3 xl:px-0'>{children}</div>
                     <Footer />

@@ -1,7 +1,7 @@
 import { Noto_Sans_KR, Open_Sans } from 'next/font/google'
 
 export const notoSansKr = Noto_Sans_KR({
-    weight: '400',
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     display: 'fallback',
     subsets: ['latin'],
     style: 'normal',
@@ -10,7 +10,7 @@ export const notoSansKr = Noto_Sans_KR({
 })
 
 export const openSans = Open_Sans({
-    weight: '400',
+    weight: ['300', '400', '600', '700', '800'],
     display: 'fallback',
     subsets: ['latin'],
     style: 'normal',

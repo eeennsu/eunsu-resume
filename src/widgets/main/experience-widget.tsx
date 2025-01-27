@@ -14,8 +14,8 @@ export const ExperienceWidget: FC = () => {
                         className='flex flex-col gap-7'
                     >
                         <div className='flex flex-col gap-0.5'>
-                            <p className='text-xl md:text-2xl'>{experience.startDate} ~ 현재</p>
                             <h3 className='text-2xl md:text-3xl font-semibold'>{experience.company}</h3>
+                            <p className='text-base md:text-lg'>{experience.startDate} ~ 현재</p>
                         </div>
 
                         {experience.activities.map((activity, i) => (

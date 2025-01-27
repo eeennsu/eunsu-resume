@@ -11,7 +11,7 @@ import { FC } from 'react'
 
 const HomePage: FC = () => {
     return (
-        <main className='flex flex-col gap-14 md:gap-20'>
+        <main className='flex flex-col gap-14 md:gap-16'>
             <ProfileWidget />
             <IntroduceWidget />
             <ExperienceWidget />
@@ -23,6 +23,6 @@ const HomePage: FC = () => {
     )
 }
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 export default HomePage

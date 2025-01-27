@@ -11,14 +11,17 @@ export const metadata: Metadata = {
     authors: [
         {
             name: '방은수',
-            url: SITE_URL,
+            url: 'https://github.com/eeennsu',
         },
     ],
     twitter: {
         title: '방은수 - 프론트엔드 개발자 이력서',
         description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
     },
-    robots: 'index, follow',
+    robots: {
+        index: true,
+        follow: true,
+    },
     alternates: {
         canonical: SITE_URL,
         languages: {

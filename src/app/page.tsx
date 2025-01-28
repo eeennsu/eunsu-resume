@@ -24,5 +24,3 @@ const HomePage: FC = async () => {
 }
 
 export default HomePage
-
-export const dynamic = 'force-dynamic'

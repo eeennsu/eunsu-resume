@@ -7,7 +7,7 @@ export const PROFILE = {
     descriptions: [
         {
             type: 'email',
-            value: 'xxx592@naver.com',
+            value: 'xxx9901@naver.com',
         },
         {
             type: 'github',

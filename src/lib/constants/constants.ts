@@ -57,7 +57,7 @@ export const EXPERIENCE: Record<string, ExperienceType> = {
                         details: [
                             {
                                 problem:
-                                    '실습, vod 등에 따라 요구되는 설정 값이 달라 일관된 폼을 제공하기 어려웠고, UI 복잡성이 증가하는 문제가 발생.',
+                                    '실습, vod 등에 따라 요구되는 설정 값이 달라 일관된 폼을 제공하기 어려웠고, UI 복잡성이 증가하는 문제가 발생',
                                 solution:
                                     '각 컨텐츠 유형별로 독립적인 폼을 구성하고, 선택된 유형에 따라 동적으로 렌더링하도록 개선하여 UI 복잡성을 완화하고 사용성을 개선',
                             },
@@ -329,8 +329,8 @@ export const PORTFOLIOS = [
         name: 'Scrama',
         descriptionList: ['아마존 웹 스크레핑 사이트'],
         githubLink: 'https://github.com/eeennsu/scrama',
-        siteLink: 'https://eunstory.eunsu.kr/',
-        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'cheerio'],
+        siteLink: 'https://scrama.eunsu.kr/',
+        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Cheerio'],
     },
     {
         name: 'Equipment Rental System',
@@ -350,7 +350,7 @@ export const PORTFOLIOS = [
         descriptionList: ['Thread 클론 사이트'],
         githubLink: 'https://github.com/eeennsu/nextjs-thread',
         siteLink: 'https://eeennsu-nextjs-thread.vercel.app/',
-        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Clerk', 'Mongoose'],
+        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Clerk', 'Mongoose', 'Clerk'],
     },
     {
         name: 'Movie TV Actor',

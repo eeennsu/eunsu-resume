@@ -350,7 +350,7 @@ export const PORTFOLIOS = [
         descriptionList: ['Thread 클론 사이트'],
         githubLink: 'https://github.com/eeennsu/nextjs-thread',
         siteLink: 'https://eeennsu-nextjs-thread.vercel.app',
-        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Clerk', 'Mongoose', 'Clerk'],
+        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Clerk', 'Mongoose'],
     },
     {
         name: 'Movie TV Actor',

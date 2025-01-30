@@ -141,7 +141,7 @@ export const EXPERIENCE: Record<string, ExperienceType> = {
             },
             {
                 startDate: '2024.08.02',
-                endDate: '2024.09.30',
+                endDate: '2024.10.01',
                 estimatedDuration: 2,
                 title: '코딩테스트 전용 플랫폼 개발',
                 doneList: [

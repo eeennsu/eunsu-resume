@@ -17,7 +17,7 @@ export const EducationWidget: FC = () => {
                         <span className='font-medium text-sm md:text-lg ml-1 text-gray-800'>{EDUCATION.department}</span>
                     </h3>
                 </div>
-                <ul className='list-disc list-inside'>
+                <ul className='list-disc list-outside ml-4'>
                     {EDUCATION.activities.map((activity, i) => (
                         <li key={i}>{activity}</li>
                     ))}

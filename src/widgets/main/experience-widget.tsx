@@ -11,7 +11,7 @@ export const ExperienceWidget: FC = () => {
                 {Object.values(EXPERIENCE).map((experience) => (
                     <div
                         key={experience.company}
-                        className='flex flex-col gap-7'
+                        className='flex flex-col gap-9 md:gap-7'
                     >
                         <div className='flex flex-col gap-0.5'>
                             <h3 className='text-2xl md:text-3xl font-semibold'>{experience.company}</h3>

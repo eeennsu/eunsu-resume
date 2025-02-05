@@ -1,19 +1,10 @@
-import { type FC } from 'react'
-import { Badge } from '@/shared/common'
-import { ProfileItem } from '@/shared'
-import { PROFILE } from '@/lib/constants'
-import { ProfileHeader } from '@/features/profile-header'
-import { fetchHandler } from '@/lib/api/next-api'
-import { ResponseGitHubBranch } from '@/entity/github'
-import Image from 'next/image'
-import dayjs from 'dayjs'
+import { ProfileHeader } from '@/features/profile-header';
+import { PROFILE } from '@/lib/constants';
+import { LastUpdate, ProfileItem } from '@/shared';
+import Image from 'next/image';
+import { type FC } from 'react';
 
-export const ProfileWidget: FC = async () => {
-    const branchResp = await fetchHandler<ResponseGitHubBranch>('/github/branch')
-
-    const now = dayjs().startOf('day')
-    const writeDay = dayjs(branchResp.commit.commit.author.date).startOf('day') || now.subtract(8, 'day')
-
+export const ProfileWidget: FC = () => {
     return (
         <section className='flex w-full gap-4 md:gap-[30px] pt-5 max-md:flex-col max-md:items-center'>
             <ProfileHeader />
@@ -41,18 +32,7 @@ export const ProfileWidget: FC = async () => {
                     ))}
                 </div>
 
-                <div className='w-full flex items-center gap-3 text-xs max-md:justify-end group'>
-                    Last Update
-                    <Badge
-                        className='tracking-wide'
-                        variant='primary'
-                    >
-                        {writeDay.format('YYYY-MM-DD')} (D + {now.diff(writeDay, 'day') || 'Day'})
-                    </Badge>
-                    <span className='text-xs font-medium group-hover:opacity-100 opacity-0 transition-all'>
-                        Using by github api
-                    </span>
-                </div>
+                <LastUpdate />
             </div>
         </section>
     )

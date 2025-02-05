@@ -15,11 +15,11 @@ export const PROFILE = {
         },
         {
             type: 'blog',
-            value: 'https://velog.io/@diso592/posts (기술 블로그)',
+            value: 'https://velog.io/@diso592/posts',
         },
         {
             type: 'blog',
-            value: 'https://eunstory.eunsu.kr (회고 블로그)',
+            value: 'https://eunstory.eunsu.kr',
         },
     ] as Array<{ type: IconType; value: string }>,
 }

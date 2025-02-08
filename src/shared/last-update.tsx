@@ -7,7 +7,7 @@ import { Badge } from '@/shared/common'
 import { useEffect, useState, type FC } from 'react'
 
 export const LastUpdate: FC = () => {
-    const [writeDay, setWriteDay] = useState<Dayjs>(dayjs().subtract(8, 'day'))
+    const [writeDay, setWriteDay] = useState<Dayjs>()
     const [dayDiff, setDayDiff] = useState<number>(0)
 
     useEffect(() => {
@@ -26,14 +26,16 @@ export const LastUpdate: FC = () => {
     }, [])
 
     return (
-        <div className='w-full flex items-center gap-3 text-xs max-md:justify-end group'>
+        <div className='w-full flex items-center gap-3 text-xs max-md:justify-end group h-5'>
             Last Update
-            <Badge
-                className='tracking-wide'
-                variant='primary'
-            >
-                {writeDay.format('YYYY-MM-DD')} (D {dayDiff > 0 ? `+ ${dayDiff}` : 'Day'})
-            </Badge>
+            {writeDay && (
+                <Badge
+                    className='tracking-wide'
+                    variant='primary'
+                >
+                    {writeDay.format('YYYY-MM-DD')} (D {dayDiff > 0 ? `+ ${dayDiff}` : 'Day'})
+                </Badge>
+            )}
             <span className='text-xs font-medium group-hover:opacity-100 opacity-0 transition-all'>Using by github api</span>
         </div>
     )

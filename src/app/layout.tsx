@@ -7,6 +7,9 @@ import '@/lib/css/globals.css'
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
     title: '방은수 이력서',
+    icons: {
+        icon: '/favicon.ico',
+    },
     description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
     authors: [
         {

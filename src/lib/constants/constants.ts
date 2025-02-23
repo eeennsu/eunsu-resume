@@ -265,13 +265,13 @@ export const EXPERIENCE: Record<string, ExperienceType> = {
                     },
                     {
                         subject: '토스 페이먼츠와 연동한 결제 기능 도입',
-                        details: [
-                            {
-                                problem: '토스의 결제 UI를 특정 위치에 렌더링해야 하는 요구사항 발생',
-                                solution:
-                                    '결제 수단과 약관 동의를 렌더링할 element를 생성하고, toss에서 제공하는 결제 위젯의 \`render\` 메서드를 활용하여 동적으로 UI를 삽입하도록 구현',
-                            },
-                        ],
+                        // details: [
+                        //     {
+                        //         problem: '토스의 결제 UI를 특정 위치에 렌더링해야 하는 요구사항 발생',
+                        //         solution:
+                        //             '결제 수단과 약관 동의를 렌더링할 element를 생성하고, toss에서 제공하는 결제 위젯의 \`render\` 메서드를 활용하여 동적으로 UI를 삽입하도록 구현',
+                        //     },
+                        // ],
                     },
                     {
                         subject: 'tiptap 라이브러리를 활용하여 텍스트 에디터 커스터마이징',

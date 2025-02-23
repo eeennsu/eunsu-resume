@@ -1,7 +1,7 @@
+import type { FC } from 'react'
 import { SkillCard } from '@/features'
 import { SKILL } from '@/lib/constants'
 import { SectionTitle } from '@/shared'
-import type { FC } from 'react'
 
 export const SkillsWidget: FC = () => {
     return (

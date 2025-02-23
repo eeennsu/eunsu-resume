@@ -1,8 +1,7 @@
+import { FC } from 'react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/lib/ui/accordion'
 import { getEstimatedDuration } from '@/lib/utils'
 import { Badge, Markdown } from '@/shared/common'
-
-import { FC } from 'react'
 
 type Props = ExperienceType['activities'][number]
 
@@ -19,20 +18,20 @@ export const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList })
                 </div>
             </div>
             <ol className='list-decimal list-inside flex flex-col gap-10 md:gap-7 ml-2'>
-                {doneList.map((done, i) => (
+                {doneList.map((done) => (
                     <li
-                        key={i}
+                        key={done.subject}
                         className='custom-decimal-list'
                     >
                         <span className='text-base md:text-lg font-semibold'>{done.subject}</span>
 
                         {done.details && (
                             <ul className='list-disc list-outside ml-4 text-sm'>
-                                {done.details.map((detail, j) => {
+                                {done.details.map((detail) => {
                                     if (typeof detail === 'string') {
                                         return (
                                             <li
-                                                key={`${i}-${j}`}
+                                                key={detail}
                                                 className=' text-gray-800 ml-6'
                                             >
                                                 <Markdown>{detail}</Markdown>
@@ -42,7 +41,7 @@ export const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList })
 
                                     return (
                                         <li
-                                            key={`${i}-${j}`}
+                                            key={detail.problem}
                                             className='list-none mb-5 last:mb-0 font-medium flex flex-col gap-0.5'
                                         >
                                             <Markdown className='marker-problem flex text-orange-600 gap-0.5'>

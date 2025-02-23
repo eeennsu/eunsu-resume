@@ -18,9 +18,9 @@ export const ExperienceWidget: FC = () => {
                             <p className='text-base md:text-lg'>{experience.startDate} ~ 현재</p>
                         </div>
 
-                        {experience.activities.map((activity, i) => (
+                        {experience.activities.map((activity) => (
                             <ActivityCard
-                                key={i}
+                                key={activity.title}
                                 startDate={activity.startDate}
                                 endDate={activity.endDate}
                                 title={activity.title}

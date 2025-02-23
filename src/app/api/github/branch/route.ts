@@ -11,8 +11,9 @@ export const GET = withApiHandler(async () => {
         })
 
         return NextResponse.json(response.data)
-    } catch (error) {
+    } catch (error: unknown) {
         console.log('error!', error)
+        return NextResponse.json({ error }, { status: 500 })
     }
 })
 

@@ -18,8 +18,8 @@ export const EducationWidget: FC = () => {
                     </h3>
                 </div>
                 <ul className='list-disc list-outside ml-4'>
-                    {EDUCATION.activities.map((activity, i) => (
-                        <li key={i}>{activity}</li>
+                    {EDUCATION.activities.map((activity) => (
+                        <li key={activity}>{activity}</li>
                     ))}
                 </ul>
             </div>

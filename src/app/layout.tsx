@@ -54,8 +54,8 @@ export default function RootLayout({
     return (
         <html lang='ko'>
             <body className={`${notoSansKr.className} antialiased `}>
-                <div className='min-h-screen bg-white'>
-                    <div className='max-w-screen-xl mx-auto px-3 xl:px-0'>{children}</div>
+                <div className='min-h-screen bg-white flex flex-col'>
+                    <div className='max-w-screen-xl mx-auto px-3 xl:px-0 flex-grow'>{children}</div>
                     <Footer />
                 </div>
             </body>

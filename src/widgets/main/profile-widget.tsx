@@ -1,8 +1,8 @@
-import { ProfileHeader } from '@/features/profile-header';
-import { PROFILE } from '@/lib/constants';
-import { LastUpdate, ProfileItem } from '@/shared';
-import Image from 'next/image';
-import { type FC } from 'react';
+import { ProfileHeader } from '@/features/profile-header'
+import { PROFILE } from '@/lib/constants'
+import { LastUpdate, ProfileItem } from '@/shared'
+import Image from 'next/image'
+import { type FC } from 'react'
 
 export const ProfileWidget: FC = () => {
     return (
@@ -22,9 +22,9 @@ export const ProfileWidget: FC = () => {
                     <p className='text-gray-500 text-sm pl-1 tracking-wide'>{PROFILE.birthDay}</p>
                 </div>
                 <div className='flex flex-col gap-2 md:gap-4 px-4'>
-                    {PROFILE.descriptions.map((description, i) => (
+                    {PROFILE.descriptions.map((description) => (
                         <ProfileItem
-                            key={i}
+                            key={description.value}
                             icon={description.type}
                             href={description.type === 'email' ? `mailto:${description.value}` : description.value}
                             value={description.value}

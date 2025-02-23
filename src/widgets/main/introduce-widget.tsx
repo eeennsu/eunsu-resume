@@ -8,8 +8,8 @@ export const IntroduceWidget: FC = () => {
             <SectionTitle>Introduce</SectionTitle>
             <div className='flex flex-col gap-2 flex-grow'>
                 <div className='flex text-lg  flex-col gap-4 break-keep'>
-                    {INTRODUCE.map((item, i) => (
-                        <p key={i}>{item}</p>
+                    {INTRODUCE.map((intro) => (
+                        <p key={intro}>{intro}</p>
                     ))}
                 </div>
             </div>

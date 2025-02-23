@@ -9,9 +9,9 @@ export const PortfolioWidget: FC = () => {
             <SectionTitle>Portfolio</SectionTitle>
 
             <div className='grid md:grid-cols-2 w-full'>
-                {PORTFOLIOS.map((portfolio, index) => (
+                {PORTFOLIOS.map((portfolio) => (
                     <PortfolioCard
-                        key={index}
+                        key={portfolio.name}
                         name={portfolio.name}
                         descriptionList={portfolio.descriptionList}
                         githubLink={portfolio.githubLink}

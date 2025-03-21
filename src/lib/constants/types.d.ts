@@ -1,6 +1,7 @@
 type ExperienceType = {
     company: string
     startDate: string
+    endDate?: string
     activities: Array<{
         startDate: string
         endDate?: string

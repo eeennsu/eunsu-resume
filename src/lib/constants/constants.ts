@@ -35,9 +35,11 @@ export const EXPERIENCE: Record<string, ExperienceType> = {
     first: {
         company: '한국글로벌널리지네트웍(주)',
         startDate: '2024.03.11',
+        endDate: '2025.03.21',
         activities: [
             {
                 startDate: '2025.01.16',
+                endDate: '2025.03.21',
                 title: '기존 자사 플랫폼의 전용 관리자 사이트 개발',
                 doneList: [
                     {

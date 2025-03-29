@@ -6,7 +6,7 @@ import '@/lib/css/globals.css'
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
-    title: 'Eunsu Bang - Frontend Developer Resume',
+    title: '방은수 이력서',
     icons: {
         icon: '/favicon.ico',
     },

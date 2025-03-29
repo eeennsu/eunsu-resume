@@ -1,6 +1,8 @@
+'use client'
+
+import type { FC } from 'react'
 import { INTRODUCE } from '@/lib/constants'
 import { SectionTitle } from '@/shared'
-import type { FC } from 'react'
 
 export const IntroduceWidget: FC = () => {
     return (

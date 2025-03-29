@@ -29,10 +29,7 @@ export const LastUpdate: FC = () => {
         <div className='w-full flex items-center gap-3 text-xs max-md:justify-end group h-5'>
             Last Update
             {writeDay && (
-                <Badge
-                    className='tracking-wide'
-                    variant='primary'
-                >
+                <Badge className='tracking-wide'>
                     {writeDay.format('YYYY-MM-DD')} (D {dayDiff > 0 ? `+ ${dayDiff}` : 'Day'})
                 </Badge>
             )}

@@ -14,7 +14,7 @@ export const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList })
                     <p className='text-sm text-gray-600'>
                         {startDate} ~ {endDate || '현재'}
                     </p>
-                    {endDate && <Badge variant='secondary'>{`${getEstimatedDuration(startDate, endDate)} 개월`}</Badge>}
+                    {endDate && <Badge variant='cyan'>{`${getEstimatedDuration(startDate, endDate)} 개월`}</Badge>}
                 </div>
             </div>
             <ol className='list-decimal list-inside flex flex-col gap-10 md:gap-7 ml-2'>

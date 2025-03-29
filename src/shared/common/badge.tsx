@@ -1,20 +1,38 @@
-import { DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren } from 'react'
-import { twMerge } from 'tailwind-merge'
+import { cva, VariantProps } from 'class-variance-authority'
+import { ComponentProps, FC, PropsWithChildren } from 'react'
 
-interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
-    variant?: 'primary' | 'secondary' | 'tertiary'
-}
+const badgeVariants = cva('inline-flex items-center justify-center w-fit font-medium rounded-sm', {
+    variants: {
+        variant: {
+            gray: 'bg-slate-600 text-white',
+            cyan: 'bg-cyan-500 text-white',
+            orange: 'bg-orange-400 text-white',
+            emerald: 'bg-emerald-500 text-white',
+        },
+        size: {
+            sm: 'text-xs py-0.5 px-1.5 h-6',
+            md: 'text-sm py-1 px-2 h-6',
+            lg: 'text-base py-1.5 px-3 h-8',
+        },
+    },
+    defaultVariants: {
+        variant: 'gray',
+        size: 'sm',
+    },
+    compoundVariants: [
+        {
+            size: ['md', 'lg'],
+            className: 'max-md:text-xs max-md:py-0.5 max-md:px-1.5 max-md:h-6',
+        },
+    ],
+})
 
-export const Badge: FC<PropsWithChildren<Props>> = ({ children, variant, className, ...props }) => {
+type Props = ComponentProps<'span'> & VariantProps<typeof badgeVariants>
+
+export const Badge: FC<PropsWithChildren<Props>> = ({ children, variant, size, className, ...props }) => {
     return (
         <span
-            className={twMerge(
-                'font-medium text-xs rounded-[4px] py-0.5 px-1.5',
-                variant === 'primary' && 'bg-slate-600 text-white',
-                variant === 'secondary' && 'bg-cyan-500 text-white',
-                variant === 'tertiary' && 'bg-orange-400 text-white',
-                className
-            )}
+            className={badgeVariants({ variant, size, className })}
             {...props}
         >
             {children}

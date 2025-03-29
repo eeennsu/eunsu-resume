@@ -47,7 +47,7 @@ export const PortfolioCard: FC<Props> = ({ name, descriptionList, githubLink, si
             <div className='flex flex-wrap gap-2'>
                 {tools.map((tool) => (
                     <Badge
-                        variant='tertiary'
+                        variant='orange'
                         key={tool}
                     >
                         {tool}

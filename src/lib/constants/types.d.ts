@@ -12,4 +12,7 @@ type ExperienceType = {
             details?: Array<string | { problem: string; solution: string }>
         }>
     }>
+    note?: {
+        reasonForLeaving: string
+    }
 }

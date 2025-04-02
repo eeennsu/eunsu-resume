@@ -16,7 +16,7 @@ export const PortfolioCard: FC<Props> = ({ name, descriptionList, githubLink, si
         <div className={twMerge('flex flex-col gap-4 even:border-r-0 border-b border-r p-6')}>
             <div className='grid grid-cols-6 gap-2 border-gray-400'>
                 <h3 className='col-span-3 md:col-span-2 font-semibold text-gray-800 text-lg md:text-xl'>{name}</h3>
-                <ul className='w-full col-span-3 md:col-span-4 list-disc list-outside text-sm md:text-base ml-4 md:ml-0'>
+                <ul className='w-full col-span-3 md:col-span-4 list-disc list-inside text-sm md:text-base ml-4 md:ml-0'>
                     {descriptionList.map((description) => (
                         <li key={description}>{description}</li>
                     ))}

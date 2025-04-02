@@ -1,7 +1,7 @@
-import { ProfileHeader } from '@/features/profile-header'
+import { type FC } from 'react'
+import { ProfileHeader } from '@/features'
 import { PROFILE } from '@/lib/constants'
 import { LastUpdate, ProfileItem } from '@/shared'
-import { type FC } from 'react'
 import Image from 'next/image'
 
 export const ProfileWidget: FC = () => {

@@ -1,4 +1,4 @@
-import { PortfolioCard } from '@/features/portfolio-card'
+import { PortfolioCard } from '@/features'
 import { PORTFOLIOS } from '@/lib/constants'
 import { SectionTitle } from '@/shared'
 import type { FC } from 'react'

@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { getEstimatedDuration } from '@/lib/utils'
 import { Badge, Markdown } from '@/shared/common'
 
-type Props = ExperienceType['activities'][number]
+type Props = CompanyExperience['activities'][number]
 
 export const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList }) => {
     return (

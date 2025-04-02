@@ -2,7 +2,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import type { FC, PropsWithChildren } from 'react'
 
 type Props = {
-    note: ExperienceType['note']
+    note: CompanyExperience['note']
 }
 
 export const CompanyNoteModal: FC<PropsWithChildren<Props>> = ({ children, note }) => {

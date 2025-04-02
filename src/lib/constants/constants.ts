@@ -25,9 +25,14 @@ export const PROFILE = {
     ] as Array<{ type: IconType; value: string }>,
 }
 
-export const EXPERIENCES: ExperienceType[] = [
+export const EXPERIENCES: CompanyExperience[] = [
     {
-        company: '한국글로벌널리지네트웍(주)',
+        companyName: '(주)원더라운드',
+        startDate: '2025.04.14',
+        activities: [],
+    },
+    {
+        companyName: '한국글로벌널리지네트웍(주)',
         startDate: '2024.03.11',
         endDate: '2025.03.21',
         activities: [
@@ -287,13 +292,8 @@ export const EXPERIENCES: ExperienceType[] = [
             },
         ],
         note: {
-            reasonForLeaving: '근무지 재배치로 인한 통근 곤란으로 퇴사하였습니다. (인천에서 가산디지털단지 --> 인천에서 선릉)',
+            reasonForLeaving: '근무지 재배치로 인한 통근 곤란으로 퇴사 (인천 <-> 가산디지털단지에서 인천 <-> 강남으로 변경)',
         },
-    },
-    {
-        company: '(주)원더라운드',
-        startDate: '2025.04.14',
-        activities: [],
     },
 ]
 

@@ -1,5 +1,5 @@
-type ExperienceType = {
-    company: string
+type CompanyExperience = {
+    companyName: string
     startDate: string
     endDate?: string
     activities: Array<{

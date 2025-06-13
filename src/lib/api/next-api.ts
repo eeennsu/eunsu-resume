@@ -1,33 +1,39 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server';
 
 export const withApiHandler = <T extends (...args: any[]) => Promise<any>>(request: T) => {
-    return async (...params: Parameters<T>) => {
-        try {
-            const result = await request(...params)
-
-            return result
-        } catch (error) {
-            console.log(error)
-
-            return NextResponse.json({ error: (error as Error)?.message || 'unknown error' }, { status: 500 })
-        }
-    }
-}
-
-export const fetchHandler = async <T extends Record<string, any>>(url: string, options?: RequestInit): Promise<T> => {
+  return async (...params: Parameters<T>) => {
     try {
-        const isServer = typeof window === 'undefined'
-        const apiUrl = isServer ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/api${url}` : `/api${url}`
+      const result = await request(...params);
 
-        const response = await fetch(apiUrl, options)
-
-        if (response.ok) {
-            return response.json() as Promise<T>
-        }
-
-        return { statusText: response.statusText } as unknown as T
+      return result;
     } catch (error) {
-        console.log(error)
-        throw error
+      console.log(error);
+
+      return NextResponse.json(
+        { error: (error as Error)?.message || 'unknown error' },
+        { status: 500 },
+      );
     }
-}
+  };
+};
+
+export const fetchHandler = async <T extends Record<string, any>>(
+  url: string,
+  options?: RequestInit,
+): Promise<T> => {
+  try {
+    const isServer = typeof window === 'undefined';
+    const apiUrl = isServer ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/api${url}` : `/api${url}`;
+
+    const response = await fetch(apiUrl, options);
+
+    if (response.ok) {
+      return response.json() as Promise<T>;
+    }
+
+    return { statusText: response.statusText } as unknown as T;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};

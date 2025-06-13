@@ -1,64 +1,64 @@
-import type { Metadata } from 'next'
-import { Footer } from '@/widgets/layout'
-import { notoSansKr } from '@/lib/font'
-import { SITE_URL } from '@/lib/constants'
-import '@/lib/css/globals.css'
+import { SITE_URL } from '@lib/constants';
+import '@lib/css/globals.css';
+import { notoSansKr } from '@lib/font';
+import { Footer } from '@widgets/layout';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    metadataBase: new URL(SITE_URL),
-    title: '방은수 이력서',
-    icons: {
-        icon: '/favicon.ico',
+  metadataBase: new URL(SITE_URL),
+  title: '방은수 이력서',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
+  authors: [
+    {
+      name: '방은수',
+      url: 'https://github.com/eeennsu',
     },
+  ],
+  twitter: {
+    title: '방은수 - 프론트엔드 개발자 이력서',
     description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
-    authors: [
-        {
-            name: '방은수',
-            url: 'https://github.com/eeennsu',
-        },
-    ],
-    twitter: {
-        title: '방은수 - 프론트엔드 개발자 이력서',
-        description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      en: '/en',
+      ko: '/',
     },
-    robots: {
-        index: true,
-        follow: true,
-    },
-    alternates: {
-        canonical: SITE_URL,
-        languages: {
-            en: '/en',
-            ko: '/',
-        },
-    },
-    openGraph: {
-        type: 'website',
-        url: SITE_URL,
-        title: '방은수 - 프론트엔드 개발자 이력서',
-        description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
-        locale: 'ko_KR',
-    },
-    keywords:
-        '프론트엔드 개발자, 방은수, 이력서, 포트폴리오, Bang Eunsu, React.js, React, Next.js, Next, Typescript, ts, Frontend Developer, Resume, Portfolio',
-    verification: {
-        google: 'kIt_sr7AcMn_DeNc6Ed3boJTDtXOtBRZQAFfeW-nI9U',
-    },
-}
+  },
+  openGraph: {
+    type: 'website',
+    url: SITE_URL,
+    title: '방은수 - 프론트엔드 개발자 이력서',
+    description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
+    locale: 'ko_KR',
+  },
+  keywords:
+    '프론트엔드 개발자, 방은수, 이력서, 포트폴리오, Bang Eunsu, React.js, React, Next.js, Next, Typescript, ts, Frontend Developer, Resume, Portfolio',
+  verification: {
+    google: 'kIt_sr7AcMn_DeNc6Ed3boJTDtXOtBRZQAFfeW-nI9U',
+  },
+};
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang='ko'>
-            <body className={`${notoSansKr.className} antialiased`}>
-                <div className='min-h-screen bg-white flex flex-col'>
-                    <div className='max-w-screen-xl mx-auto px-3 xl:px-0 flex-grow'>{children}</div>
-                    <Footer />
-                </div>
-            </body>
-        </html>
-    )
+  return (
+    <html lang='ko'>
+      <body className={`${notoSansKr.className} antialiased`}>
+        <div className='flex min-h-screen flex-col bg-white'>
+          <div className='mx-auto max-w-screen-xl flex-grow px-3 xl:px-0'>{children}</div>
+          <Footer />
+        </div>
+      </body>
+    </html>
+  );
 }

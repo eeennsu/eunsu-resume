@@ -1,1 +1,1 @@
-export * from './octokit'
+export * from './octokit';

@@ -1,33 +1,30 @@
-import { Github, Mail, NotebookPen } from 'lucide-react'
-import Link from 'next/link'
-import type { FC, ReactNode } from 'react'
+import { Github, Mail, NotebookPen } from 'lucide-react';
+import Link from 'next/link';
+import type { FC, ReactNode } from 'react';
 
-export type IconType = 'email' | 'github' | 'blog'
+export type IconType = 'email' | 'github' | 'blog';
 
 const Icon = {
-    email: <Mail />,
-    github: <Github />,
-    blog: <NotebookPen />,
-}
+  email: <Mail />,
+  github: <Github />,
+  blog: <NotebookPen />,
+};
 
 interface Props {
-    icon: keyof typeof Icon
-    href: string
-    value: ReactNode
+  icon: keyof typeof Icon;
+  href: string;
+  value: ReactNode;
 }
 
 export const ProfileItem: FC<Props> = ({ icon, href, value }) => {
-    const IconComp = Icon[icon]
+  const IconComp = Icon[icon];
 
-    return (
-        <div className='flex items-center gap-3 md:gap-6'>
-            {IconComp}
-            <Link
-                href={href}
-                className='hover:underline underline-offset-2 max-md:text-sm text-blue-500'
-            >
-                {value}
-            </Link>
-        </div>
-    )
-}
+  return (
+    <div className='flex items-center gap-3 md:gap-6'>
+      {IconComp}
+      <Link href={href} className='text-blue-500 underline-offset-2 hover:underline max-md:text-sm'>
+        {value}
+      </Link>
+    </div>
+  );
+};

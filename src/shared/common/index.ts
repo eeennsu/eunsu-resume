@@ -1,2 +1,2 @@
-export * from './badge'
-export * from './markdown'
+export * from './badge';
+export * from './markdown';

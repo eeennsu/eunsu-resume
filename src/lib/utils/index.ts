@@ -1,2 +1,2 @@
-export * from './shadcn'
-export * from './date'
+export * from './shadcn';
+export * from './date';

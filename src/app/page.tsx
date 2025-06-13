@@ -1,13 +1,12 @@
-import {
-  EducationWidget,
-  ExperienceWidget,
-  IntroduceWidget,
-  PortfolioWidget,
-  ProfileWidget,
-  CertificationsWidget,
-  SkillsWidget,
-} from '@widgets/main';
 import { FC } from 'react';
+
+import CertificationsWidget from '@widgets/Certification';
+import EducationWidget from '@widgets/Eduction';
+import ExperienceWidget from '@widgets/Experience';
+import IntroduceWidget from '@widgets/Introduce';
+import PortfolioWidget from '@widgets/Portfolio';
+import ProfileWidget from '@widgets/Profile';
+import SkillsWidget from '@widgets/Skill';
 
 const HomePage: FC = async () => {
   return (

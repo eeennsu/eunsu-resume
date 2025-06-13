@@ -1,8 +1,9 @@
-import { SITE_URL } from '@lib/constants';
-import '@lib/css/globals.css';
-import { notoSansKr } from '@lib/font';
-import { Footer } from '@widgets/layout';
+import { SITE_URL } from '@shared/consts/commons';
+import '@shared/css/globals.css';
+import { notoSansKr } from '@shared/font/fonts';
 import type { Metadata } from 'next';
+
+import Footer from '@widgets/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

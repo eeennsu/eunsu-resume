@@ -1,5 +1,5 @@
-import { octokit } from '@lib/api';
-import { withApiHandler } from '@lib/api/next-api';
+import octokit from '@shared/api/octokit';
+import withApiHandler from '@shared/api/withApiHandler';
 import { NextResponse } from 'next/server';
 
 export const GET = withApiHandler(async () => {

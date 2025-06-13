@@ -1,7 +1,0 @@
-export * from './education-widget';
-export * from './experience-widget';
-export * from './profile-widget';
-export * from './skills-widget';
-export * from './introduce-widget';
-export * from './portfolio-widget';
-export * from './certifications-widget';

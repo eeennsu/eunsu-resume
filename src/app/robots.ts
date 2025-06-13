@@ -1,4 +1,4 @@
-import { SITE_URL } from '@lib/constants';
+import { SITE_URL } from '@shared/consts/commons';
 import type { MetadataRoute } from 'next';
 
 const robots = (): MetadataRoute.Robots => {

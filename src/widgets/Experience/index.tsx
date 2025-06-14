@@ -1,4 +1,5 @@
 import SectionTitle from '@shared/components/SectionTitle';
+import TextDivider from '@shared/components/TextDivider';
 import type { FC } from 'react';
 
 import ActivityCard from '@features/experience/ui/ActivityCard';
@@ -11,9 +12,9 @@ const ExperienceWidget: FC = () => {
     <section className='flex w-full max-md:flex-col max-md:gap-2'>
       <SectionTitle>Experience</SectionTitle>
       <div className='flex flex-grow flex-col'>
-        {EXPERIENCES.map((experience, i) => (
+        {EXPERIENCES.map((experience, i, arr) => (
           <div key={experience.companyName}>
-            <div className='flex flex-col gap-5 md:gap-3'>
+            <div className='flex flex-col gap-5'>
               <ExperienceHead experience={experience} />
 
               <div className='flex flex-col gap-7 md:gap-4'>
@@ -29,9 +30,7 @@ const ExperienceWidget: FC = () => {
               </div>
             </div>
 
-            {i !== EXPERIENCES.length - 1 && (
-              <div className='my-20 w-full border-b border-gray-400' />
-            )}
+            {i !== arr.length - 1 && <TextDivider text='Next' />}
           </div>
         ))}
       </div>

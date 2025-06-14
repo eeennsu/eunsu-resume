@@ -8,11 +8,11 @@ import { PROFILE } from '@entities/profile/consts';
 
 const ProfileWidget: FC = () => {
   return (
-    <section className='w-full py-10'>
+    <section className='w-full pt-5 md:py-6'>
       <ProfileHeader />
-      <div className='mx-auto flex flex-col justify-between gap-6 px-10 text-center md:flex-row md:text-left'>
-        <div className='flex items-center gap-14'>
-          <figure className='relative max-w-40 shrink-0 md:max-w-52'>
+      <div className='flex flex-col px-4 text-center md:mx-auto md:flex-row md:justify-between md:px-10 md:text-left'>
+        <div className='flex items-center justify-center gap-8 md:justify-start md:gap-14'>
+          <figure className='relative max-w-48 shrink-0 md:max-w-52'>
             <img
               src='/images/profile.jpg'
               alt='my-image'

@@ -1,5 +1,3 @@
-'use client';
-
 import SectionTitle from '@shared/components/SectionTitle';
 import type { FC } from 'react';
 
@@ -11,8 +9,8 @@ const IntroduceWidget: FC = () => {
       <SectionTitle>Introduce</SectionTitle>
       <div className='flex flex-grow flex-col gap-2'>
         <div className='flex flex-col gap-4 break-keep text-lg'>
-          {INTRODUCE.map(intro => (
-            <p key={intro}>{intro}</p>
+          {INTRODUCE.map((intro, i) => (
+            <p key={i}>{intro}</p>
           ))}
         </div>
       </div>

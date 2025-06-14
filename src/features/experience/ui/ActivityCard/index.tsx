@@ -12,7 +12,7 @@ const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList }) => {
   return (
     <div className='flex flex-col gap-3.5 border-b border-gray-400 pb-8 last:border-none last:pb-0'>
       <div className='flex flex-col gap-1 md:flex-row md:justify-between md:gap-4'>
-        <h4 className='text-xl font-bold md:text-2xl'>{title}</h4>
+        <h4 className='text-lg font-bold md:text-xl'>{title}</h4>
         <div className='flex items-center justify-end gap-3 md:justify-start'>
           <p className='text-sm text-gray-600'>
             {startDate} ~ {endDate || '현재'}
@@ -22,7 +22,7 @@ const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList }) => {
           )}
         </div>
       </div>
-      <ol className='ml-2 flex list-inside list-decimal flex-col gap-10 md:gap-7'>
+      <ol className='ml-4 flex list-inside list-decimal flex-col gap-10 md:gap-7'>
         {doneList.map(done => (
           <li key={done.subject} className='custom-decimal-list'>
             <span className='text-base font-semibold md:text-lg'>{done.subject}</span>

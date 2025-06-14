@@ -1,7 +1,6 @@
 'use client';
 
 import octokit from '@shared/api/octokit';
-import Badge from '@shared/components/Badge';
 import dayjs, { Dayjs } from 'dayjs';
 import { useEffect, useState, type FC } from 'react';
 
@@ -21,7 +20,7 @@ const LastUpdate: FC = () => {
         );
 
         const isoDate = branchResponse.data.commit?.commit?.author?.date;
-        setCommitDate(isoDate ? dayjs(isoDate) : null);
+        setCommitDate(isoDate ? dayjs(isoDate) : dayjs().subtract(16, 'days'));
       } catch (error) {
         console.log(error);
         setCommitDate(dayjs().subtract(13, 'days'));
@@ -35,16 +34,15 @@ const LastUpdate: FC = () => {
   const dayDiff = commitDate ? dayjs().startOf('day').diff(commitDate.startOf('day'), 'day') : null;
 
   return (
-    <div className='mt-14 flex flex-col items-center gap-2 text-sm text-gray-600'>
-      <div className='flex flex-col items-end gap-1'>
-        <span className='text-sm font-semibold text-gray-500'>마지막 업데이트</span>
-        {formattedDate && (
-          <Badge className='px-3 py-4 tracking-tight' size='md'>
-            {formattedDate} (D {dayDiff! > 0 ? `+${dayDiff}` : '- Day'})
-          </Badge>
-        )}
-      </div>
-      <i className='text-xs text-gray-500'>Powered by GitHub API</i>
+    <div className='flex flex-col items-end text-sm md:mt-14 md:items-center'>
+      <p className='w-full text-right text-sm font-semibold'>마지막 업데이트</p>
+      {formattedDate && (
+        <span className='font-semibold tracking-tight'>
+          {formattedDate} (D {dayDiff! > 0 ? `+${dayDiff}` : '- Day'})
+        </span>
+      )}
+
+      <i className='mt-1 text-xs text-gray-500'>Powered by GitHub API</i>
     </div>
   );
 };

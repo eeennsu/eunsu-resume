@@ -31,9 +31,6 @@ jobs:
       - name: Build project
         run: pnpm build
 
-      - name: Export static site
-        run: pnpm next export
-
       - name: Add .nojekyll
         run: echo "" > out/.nojekyll
 

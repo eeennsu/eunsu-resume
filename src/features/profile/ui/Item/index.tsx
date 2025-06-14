@@ -5,9 +5,9 @@ import type { FC, ReactNode } from 'react';
 export type IconType = 'email' | 'github' | 'blog';
 
 const Icon = {
-  email: <Mail />,
-  github: <Github />,
-  blog: <NotebookPen />,
+  email: <Mail size={22} />,
+  github: <Github size={22} />,
+  blog: <NotebookPen size={22} />,
 };
 
 interface Props {
@@ -20,7 +20,7 @@ const ProfileItem: FC<Props> = ({ icon, href, value }) => {
   const IconComp = Icon[icon];
 
   return (
-    <div className='flex items-center gap-3 md:gap-6'>
+    <div className='flex items-center gap-3'>
       {IconComp}
       <Link href={href} className='text-blue-500 underline-offset-2 hover:underline max-md:text-sm'>
         {value}

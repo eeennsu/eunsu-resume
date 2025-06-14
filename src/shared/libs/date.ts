@@ -51,12 +51,13 @@ export const getCompanyServiceDuration = (startDate: string, endDate: string) =>
   return result.join(' ');
 };
 
-export const getWorkAnniversary = (startDate: string) => {
-  const today = dayjs();
+export const getWorkAnniversary = (startDate: string): string => {
+  const now = dayjs();
+  const start = dayjs(startDate);
 
-  if (today.isBefore(dayjs(startDate))) {
-    return 0;
-  }
+  const totalMonths = now.diff(start, 'M');
+  const years = Math.floor(totalMonths / 12);
+  const months = (totalMonths % 12) - 1;
 
-  return today.diff(dayjs(startDate), 'year');
+  return `${years}년 ${months}개월`;
 };

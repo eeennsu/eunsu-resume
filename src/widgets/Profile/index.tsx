@@ -8,27 +8,38 @@ import { PROFILE } from '@entities/profile/consts';
 
 const ProfileWidget: FC = () => {
   return (
-    <section className='flex w-full gap-4 pt-5 max-md:flex-col max-md:items-center md:gap-[30px]'>
+    <section className='w-full py-10'>
       <ProfileHeader />
-      <img src='/images/me.jpg' alt='my-image' width={220} height={220} className='rounded-md' />
-      <div className='flex w-full flex-col justify-center gap-3 max-md:items-center md:gap-7'>
-        <div className='flex flex-col gap-1'>
-          <h1 className='text-4xl font-semibold'>{PROFILE.name}</h1>
-          <p className='pl-1 text-sm tracking-wide text-gray-500'>{PROFILE.birthDay}</p>
-        </div>
-        <div className='flex flex-col gap-2 px-4 md:gap-4'>
-          {PROFILE.descriptions.map(description => (
-            <ProfileItem
-              key={description.value}
-              icon={description.type}
-              href={
-                description.type === 'email' ? `mailto:${description.value}` : description.value
-              }
-              value={description.value}
+      <div className='mx-auto flex flex-col justify-between gap-6 px-10 text-center md:flex-row md:text-left'>
+        <div className='flex items-center gap-14'>
+          <figure className='relative max-w-40 shrink-0 md:max-w-52'>
+            <img
+              src='/images/profile.jpg'
+              alt='my-image'
+              className='w-full rounded-xl object-cover shadow-md'
             />
-          ))}
-        </div>
+          </figure>
 
+          <div className='flex flex-col gap-6'>
+            <div>
+              <h1 className='font-serif text-3xl font-semibold text-gray-900'>{PROFILE.name}</h1>
+              <p className='text-md text-gray-500'>{PROFILE.birthDay}</p>
+            </div>
+
+            <div className='flex flex-col gap-3 text-sm md:text-base'>
+              {PROFILE.descriptions.map(description => (
+                <ProfileItem
+                  key={description.value}
+                  icon={description.type}
+                  href={
+                    description.type === 'email' ? `mailto:${description.value}` : description.value
+                  }
+                  value={description.value}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
         <LastUpdate />
       </div>
     </section>

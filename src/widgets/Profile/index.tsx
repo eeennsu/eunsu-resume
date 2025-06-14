@@ -15,7 +15,7 @@ const ProfileWidget: FC = () => {
           <figure className='relative max-w-48 shrink-0 md:max-w-52'>
             <img
               src='/images/profile.jpg'
-              alt='my-image'
+              alt='profile'
               className='w-full rounded-xl object-cover shadow-md'
             />
           </figure>

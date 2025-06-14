@@ -4,7 +4,33 @@ export const EXPERIENCES: ICompanyExperience[] = [
   {
     companyName: '(주)원더라운드',
     startDate: '2025.04.14',
-    activities: [],
+    activities: [
+      {
+        startDate: '2025.04.14',
+        title: '자사 앱 관리자 페이지 시스템 고도화 및 유지보수',
+        doneList: [
+          {
+            subject: '관리자 페이지 전반에 대해 TDD 기반의 테스트 코드 작성',
+            details: [
+              'vitest 도입, 비동기 API 호출에 대한 mocking 및 테스트 시나리오 구성',
+              '커스텀한 React Router를 구성하여 테스트 환경에서도 라우팅이 작동할 수 있도록 구현',
+              'Dropdown, Modal 등의 Portal을 이용해 작성된 컴포넌트들이 테스트 환경에서 작동할 때, 트리거를 인식하지 못하는 문제 발생, 이에 화면 플로우를 유저 처럼 매끄럽게 트리거하는 userEvent 를 도입하여 해결',
+            ],
+          },
+          {
+            subject: '기존 관리자 데이터를 활용해 대시보드 페이지 기획 후 구현',
+            details: [
+              'recharts 라이브러리를 도입하여 라인 / 바 / 파이 차트 UI 구현',
+              '레이블, 툴팁, 색상 등을 커스터마이징하여 UI 구현',
+              '통계 데이터 기간 선택 필터 적용 시, 선택된 범위와 동일한 이전 기간 데이터를 자동으로 계산 및 비교 표시하는 기능 개발 (예: 최근 7일 vs 그 이전의 7일)',
+            ],
+          },
+          {
+            subject: '생성 / 수정 폼에서 발생된 유효성 오류의 시각화를 개선하여 문제 보완',
+          },
+        ],
+      },
+    ],
   },
   {
     companyName: '한국글로벌널리지네트웍(주)',

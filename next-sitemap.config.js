@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://eunsu-resume.eunsu.kr/',
+  siteUrl: 'https://eeennsu.github.io/eunsu-resume/',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 5000,

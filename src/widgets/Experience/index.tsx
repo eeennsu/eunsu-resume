@@ -10,7 +10,7 @@ const ExperienceWidget: FC = () => {
   return (
     <section className='flex w-full max-md:flex-col max-md:gap-2'>
       <SectionTitle>Experience</SectionTitle>
-      <div className='flex flex-grow flex-col gap-8 md:gap-12'>
+      <div className='flex flex-grow flex-col'>
         {EXPERIENCES.map((experience, i) => (
           <div key={experience.companyName}>
             <div className='flex flex-col gap-5 md:gap-3'>
@@ -30,7 +30,7 @@ const ExperienceWidget: FC = () => {
             </div>
 
             {i !== EXPERIENCES.length - 1 && (
-              <div className='w-full border-b-2 border-gray-600 pb-10' />
+              <div className='my-20 w-full border-b border-gray-400' />
             )}
           </div>
         ))}

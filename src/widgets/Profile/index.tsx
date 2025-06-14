@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { type FC } from 'react';
 
 import ProfileHeader from '@features/portfolio/ui/Header';
@@ -11,14 +10,7 @@ const ProfileWidget: FC = () => {
   return (
     <section className='flex w-full gap-4 pt-5 max-md:flex-col max-md:items-center md:gap-[30px]'>
       <ProfileHeader />
-      <Image
-        src='/images/me.jpg'
-        alt='my-image'
-        width={220}
-        height={220}
-        className='rounded-md'
-        priority
-      />
+      <img src='/images/me.jpg' alt='my-image' width={220} height={220} className='rounded-md' />
       <div className='flex w-full flex-col justify-center gap-3 max-md:items-center md:gap-7'>
         <div className='flex flex-col gap-1'>
           <h1 className='text-4xl font-semibold'>{PROFILE.name}</h1>

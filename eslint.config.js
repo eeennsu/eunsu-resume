@@ -4,7 +4,6 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,

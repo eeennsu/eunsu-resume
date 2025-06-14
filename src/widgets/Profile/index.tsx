@@ -14,7 +14,7 @@ const ProfileWidget: FC = () => {
         <div className='flex items-center justify-center gap-8 md:justify-start md:gap-14'>
           <figure className='relative max-w-48 shrink-0 md:max-w-52'>
             <img
-              src='/images/profile.jpg'
+              src='images/profile.jpg'
               alt='profile'
               className='w-full rounded-xl object-cover shadow-md'
             />

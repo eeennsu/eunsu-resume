@@ -1,6 +1,5 @@
 import SectionTitle from '@shared/components/SectionTitle';
 import type { FC } from 'react';
-import { twMerge } from 'tailwind-merge';
 
 import { CERTIFICATIONS } from '@entities/certification/consts';
 
@@ -12,7 +11,7 @@ const CertificationsWidget: FC = () => {
       <div className='flex flex-col gap-7'>
         <ul className='list-inside list-disc'>
           {CERTIFICATIONS.map((certification, index) => (
-            <li key={index} className={twMerge(certification.isInProgress && 'opacity-50')}>
+            <li key={index}>
               {certification.title}
               <span className='text-sm'>
                 {certification.detail && ` (${certification.detail})`}

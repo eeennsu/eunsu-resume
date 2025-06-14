@@ -23,16 +23,16 @@ const ActivityCard: FC<Props> = ({ title, startDate, endDate, doneList }) => {
         </div>
       </div>
       <ol className='ml-4 flex list-inside list-decimal flex-col gap-10 md:gap-7'>
-        {doneList.map(done => (
-          <li key={done.subject} className='custom-decimal-list'>
+        {doneList.map((done, index) => (
+          <li key={`${done.subject}-${index}`} className='custom-decimal-list'>
             <span className='text-base font-semibold md:text-lg'>{done.subject}</span>
 
             {done.details && (
               <ul className='ml-4 list-outside list-disc text-sm'>
-                {done.details.map(detail => {
+                {done.details.map((detail, index) => {
                   if (typeof detail === 'string') {
                     return (
-                      <li key={detail} className='ml-6 text-gray-800'>
+                      <li key={index} className='ml-6 text-gray-800'>
                         <Markdown>{detail}</Markdown>
                       </li>
                     );

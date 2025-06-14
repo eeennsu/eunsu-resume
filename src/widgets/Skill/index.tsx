@@ -12,8 +12,8 @@ const SkillsWidget: FC = () => {
       <div className='flex w-full flex-col gap-2'>
         <p className='text-sm text-gray-500'>경험치 및 선호도 순서로 나열하였습니다.</p>
         <div className='flex flex-col'>
-          {SKILL.map(skill => (
-            <SkillCard key={skill.category} name={skill.category} detailList={skill.items} />
+          {SKILL.map((skill, index) => (
+            <SkillCard key={index} name={skill.category} detailList={skill.items} />
           ))}
         </div>
       </div>

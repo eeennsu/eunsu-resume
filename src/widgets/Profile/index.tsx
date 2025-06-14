@@ -27,9 +27,9 @@ const ProfileWidget: FC = () => {
             </div>
 
             <div className='flex flex-col gap-3 text-sm md:text-base'>
-              {PROFILE.descriptions.map(description => (
+              {PROFILE.descriptions.map((description, index) => (
                 <ProfileItem
-                  key={description.value}
+                  key={index}
                   icon={description.type}
                   href={
                     description.type === 'email' ? `mailto:${description.value}` : description.value

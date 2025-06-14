@@ -47,9 +47,9 @@ const PortfolioCard: FC<Props> = ({ name, descriptionList, githubLink, siteLink,
         </ul>
       </div>
       <div className='flex flex-wrap gap-2'>
-        {tools.map(tool => (
+        {tools.map((tool, index) => (
           <Badge variant='orange' key={tool}>
-            {tool}
+            {index}
           </Badge>
         ))}
       </div>

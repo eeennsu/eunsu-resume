@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://eeennsu.github.io/eunsu-resume/
+
+# Sitemaps
+Sitemap: https://eeennsu.github.io/eunsu-resume/sitemap.xml

@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { ICompanyExperience } from '@entities/experience/types';
 
-import CompanyNoteModal from '../CompanyNoteModal';
+import NoteModal from '../NoteModal';
 
 type Props = {
   experience: ICompanyExperience;
@@ -18,9 +18,9 @@ const ExperienceHead: FC<Props> = ({ experience }) => {
           {experience.companyName}
         </h3>
         {experience.endDate && experience.note && (
-          <CompanyNoteModal note={experience.note}>
-            <CircleHelp className='text-gray-600' />
-          </CompanyNoteModal>
+          <NoteModal description={experience.note.description}>
+            <CircleHelp className='text-gray-600' size={24} />
+          </NoteModal>
         )}
       </div>
 
@@ -29,8 +29,11 @@ const ExperienceHead: FC<Props> = ({ experience }) => {
           {experience.startDate} ~ {experience?.endDate || '현재'}
         </p>
         {experience.endDate && (
-          <span className='text-sm'>
+          <span className='inline-flex items-center gap-1 text-sm'>
             (총 {getCompanyServiceDuration(experience.startDate, experience.endDate)} 근무)
+            <NoteModal reasonForLeaving={experience.note.reasonForLeaving}>
+              <CircleHelp className='text-gray-600' size={16} />
+            </NoteModal>
           </span>
         )}
       </div>

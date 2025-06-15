@@ -13,6 +13,7 @@ export interface ICompanyExperience {
     }>;
   }>;
   note?: {
-    reasonForLeaving: string;
+    reasonForLeaving?: string;
+    description?: string;
   };
 }

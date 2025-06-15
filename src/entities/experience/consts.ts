@@ -315,6 +315,7 @@ export const EXPERIENCES: ICompanyExperience[] = [
     note: {
       reasonForLeaving:
         '근무지 재배치로 인한 통근 곤란으로 퇴사 (인천 <-> 가산디지털단지에서 인천 <-> 강남으로 변경)',
+      description: '전 코딩허브, 한국글로벌널러지로 인수 합병',
     },
   },
 ];

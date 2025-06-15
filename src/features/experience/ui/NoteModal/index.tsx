@@ -7,24 +7,27 @@ import {
 } from '@shared/shadcn-ui/ui/dialog';
 import type { FC, PropsWithChildren } from 'react';
 
-import { ICompanyExperience } from '@entities/experience/types';
-
 type Props = {
-  note: ICompanyExperience['note'];
+  description?: string;
+  reasonForLeaving?: string;
 };
 
-const CompanyNoteModal: FC<PropsWithChildren<Props>> = ({ children, note }) => {
+const NoteModal: FC<PropsWithChildren<Props>> = ({ description, reasonForLeaving, children }) => {
   return (
     <Dialog>
       <DialogTrigger>{children}</DialogTrigger>
-      <DialogContent className='rounded-lg bg-white p-6 shadow-lg'>
+      <DialogContent className='gap-0 rounded-lg bg-white p-6 shadow-lg'>
         <DialogHeader className='mb-4'>
           <DialogTitle className='text-xl font-bold text-gray-800'>Note</DialogTitle>
         </DialogHeader>
-        {note?.reasonForLeaving && (
+        {reasonForLeaving && (
           <div className='flex flex-col gap-2'>
-            <h3 className='text-lg font-semibold text-gray-700'>퇴사 사유</h3>
-            <p className='text-gray-800'>{note.reasonForLeaving}</p>
+            <p className='text-gray-800'>{reasonForLeaving}</p>
+          </div>
+        )}
+        {description && (
+          <div className='flex flex-col gap-2'>
+            <p className='text-gray-800'>{description}</p>
           </div>
         )}
       </DialogContent>
@@ -32,4 +35,4 @@ const CompanyNoteModal: FC<PropsWithChildren<Props>> = ({ children, note }) => {
   );
 };
 
-export default CompanyNoteModal;
+export default NoteModal;

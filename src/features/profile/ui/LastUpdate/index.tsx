@@ -15,7 +15,7 @@ const LastUpdate: FC = () => {
           {
             owner: 'eeennsu',
             repo: 'eunsu-resume',
-            branch: process.env.NODE_ENV === 'production' ? 'main' : 'dev',
+            branch: process.env.NODE_ENV === 'production' ? 'master' : 'dev',
           },
         );
 

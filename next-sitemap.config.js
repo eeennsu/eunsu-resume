@@ -2,7 +2,7 @@
 const config = {
   siteUrl: 'https://eeennsu.github.io/eunsu-resume/',
   generateRobotsTxt: true,
-  generateIndexSitemap: false,
+  generateIndexSitemap: true,
   sitemapSize: 5000,
   outDir: './out',
 };

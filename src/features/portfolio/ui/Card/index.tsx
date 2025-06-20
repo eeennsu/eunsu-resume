@@ -13,7 +13,7 @@ interface Props {
 
 const PortfolioCard: FC<Props> = ({ name, descriptionList, githubLink, siteLink, tools }) => {
   return (
-    <div className={twMerge('flex flex-col gap-4 border-b border-r p-6 even:border-r-0')}>
+    <div className={twMerge('flex flex-col gap-4 border-r border-b p-6 even:border-r-0')}>
       <div className='grid grid-cols-6 gap-2 border-gray-400'>
         <h3 className='col-span-3 text-lg font-semibold text-gray-800 md:col-span-2 md:text-xl'>
           {name}

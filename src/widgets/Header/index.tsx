@@ -11,7 +11,7 @@ const Header: FC<Props> = ({ isHeaderVisible }) => {
   return (
     <header
       className={twMerge(
-        'fixed left-0 top-0 z-50 w-full bg-white/30 shadow-md backdrop-blur-lg transition-opacity duration-300 ease-out',
+        'fixed top-0 left-0 z-50 w-full bg-white/30 shadow-md backdrop-blur-lg transition-opacity duration-300 ease-out',
         isHeaderVisible ? 'opacity-100' : 'opacity-0',
       )}
     >

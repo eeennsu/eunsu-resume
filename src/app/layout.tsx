@@ -8,10 +8,8 @@ import Footer from '@widgets/Footer';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: '방은수 이력서',
-  icons: {
-    icon: '/favicon.ico',
-  },
-  description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
+  description:
+    'typescript, react.js, next.js로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
   authors: [
     {
       name: '방은수',
@@ -21,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     title: '방은수 - 프론트엔드 개발자 이력서',
     description:
-      'Next.js, React.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
+      'typescript, react.js, next.js로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
   },
   robots: {
     index: true,
@@ -38,11 +36,12 @@ export const metadata: Metadata = {
     type: 'website',
     url: SITE_URL,
     title: '방은수 - 프론트엔드 개발자 이력서',
-    description: 'Next.js 와 Typescript로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
+    description:
+      'typescript, react.js, next.js로 개발을 하는 프론트엔드 개발자 방은수의 이력서입니다.',
     locale: 'ko_KR',
   },
   keywords:
-    '프론트엔드 개발자, 방은수, 이력서, 포트폴리오, Bang Eunsu, React.js, React, Next.js, Next, Typescript, ts, Frontend Developer, Resume, Portfolio',
+    '프론트엔드 개발자, 방은수, 이력서, 포트폴리오, Bang Eunsu, React.js, React, Next.js, Next, Typescript, ts, Javascript, js, Frontend Developer, Resume, Portfolio',
   verification: {
     google: 'iuUmYGMaAlJLTlxek5zq277cmScF6x6jFXJ_MqQcaWI',
   },

@@ -6,11 +6,26 @@ export const EXPERIENCES: ICompanyExperience[] = [
     startDate: '2025.04.14',
     activities: [
       {
+        startDate: '2025.07.03',
+        title: '타사의 여행 컨텐츠 예약 및 결제 시스템의 관리자 페이지 개발',
+        doneList: [],
+      },
+      {
         startDate: '2025.04.14',
-        title: '자사 앱 관리자 페이지 시스템 고도화 및 유지보수',
+        endDate: '2025.07.02',
+        title: '자사 애플리케이션 관리자 페이지 시스템 고도화 및 유지보수',
+        estimatedDuration: 2.5,
         doneList: [
           {
-            subject: '기존 관리자 데이터를 활용해 대시보드 페이지 기획 및 구현',
+            subject: '기존 관리자 페이지 기능 리뉴얼',
+            details: [
+              '리스트 페이지에서 특정 아이템 선택 시, 이미지 및 종속 하위 데이터를 포함한 값을 생성 폼에 사전 입력하는 기능 구현',
+              '중요 콘텐츠 수정 시, 각 필드의 변경 전후 값을 JSON 형태로 시각화하는 변경 이력 추적 UI 개발',
+              'Toast UI Editor를 Tiptap Editor로 교체하고, 이미지 업로드 로딩 및 업로드 중 삭제 처리 등 기능 확장',
+            ],
+          },
+          {
+            subject: '트레픽 / 유저 활동 / 콘텐츠 데이터를 활용한 대시보드 페이지 기획 및 구현',
             details: [
               'Recharts 라이브러리를 도입하여 라인 / 바 / 파이 차트 UI를 구현하고, 각 차트별로 레이블, 축, 툴팁 등을 커스터마이징하여 UI 구현',
               '기간을 선택하여 데이터를 조회할 시, 선택한 기간과 동일한 이전 기간 데이터를 비교하여 나타내는 기능 개발 (예: 최근 7일 vs 그 이전의 7일)',
@@ -145,7 +160,7 @@ export const EXPERIENCES: ICompanyExperience[] = [
       {
         startDate: '2024.10.01',
         endDate: '2024.11.15',
-        estimatedDuration: 1,
+        estimatedDuration: 1.5,
         title: '기존 플랫폼의 고도화 및 유지보수',
         doneList: [
           {
@@ -276,7 +291,7 @@ export const EXPERIENCES: ICompanyExperience[] = [
       {
         startDate: '2024.03.11',
         endDate: '2024.05.24',
-        estimatedDuration: 2,
+        estimatedDuration: 2.5,
         title: '온라인 IT 교육 사이트 자사 플랫폼 개발',
         doneList: [
           {

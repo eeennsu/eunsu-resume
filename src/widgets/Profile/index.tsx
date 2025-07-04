@@ -11,7 +11,7 @@ const ProfileWidget: FC = () => {
     <section className='w-full pt-5 md:py-6'>
       <ProfileHeader />
       <div className='flex flex-col px-4 text-center md:mx-auto md:flex-row md:justify-between md:px-10 md:text-left'>
-        <div className='flex items-center justify-center gap-8 md:justify-start md:gap-14'>
+        <div className='flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start md:gap-14'>
           <figure className='relative max-w-48 shrink-0 md:max-w-52'>
             <img
               src='images/profile.jpg'
@@ -20,7 +20,7 @@ const ProfileWidget: FC = () => {
             />
           </figure>
 
-          <div className='flex flex-col gap-6'>
+          <div className='flex flex-col gap-3 md:gap-6'>
             <div>
               <h1 className='font-serif text-3xl font-semibold text-gray-900'>{PROFILE.name}</h1>
               <p className='text-md text-gray-500'>{PROFILE.birthDay}</p>

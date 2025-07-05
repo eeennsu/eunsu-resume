@@ -1,8 +1,9 @@
 'use client';
 
-import octokit from '@shared/api/octokit';
 import dayjs, { Dayjs } from 'dayjs';
 import { useEffect, useState, type FC } from 'react';
+
+import apiGetBranchCommitDate from '@features/github/apis/getBranchCommitDate';
 
 const LastUpdate: FC = () => {
   const [commitDate, setCommitDate] = useState<Dayjs | null>(null);
@@ -10,20 +11,12 @@ const LastUpdate: FC = () => {
   useEffect(() => {
     const fetchBranchData = async () => {
       try {
-        const branchResponse = await octokit.request(
-          'GET /repos/{owner}/{repo}/branches/{branch}',
-          {
-            owner: 'eeennsu',
-            repo: 'eunsu-resume',
-            branch: process.env.NODE_ENV === 'production' ? 'master' : 'dev',
-          },
-        );
+        const isoDate = await apiGetBranchCommitDate();
 
-        const isoDate = branchResponse.data.commit?.commit?.author?.date;
-        setCommitDate(isoDate ? dayjs(isoDate) : dayjs().subtract(16, 'days'));
+        setCommitDate(isoDate ? dayjs(isoDate) : dayjs().subtract(14, 'days'));
       } catch (error) {
         console.log(error);
-        setCommitDate(dayjs().subtract(13, 'days'));
+        setCommitDate(dayjs().subtract(14, 'days'));
       }
     };
 

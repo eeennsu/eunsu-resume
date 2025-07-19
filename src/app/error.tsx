@@ -1,14 +1,13 @@
 'use client';
 
-import type { NextPage } from 'next';
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 
 interface Props {
   error: Error & { digest?: string };
   reset: () => void;
 }
 
-const ErrorPage: NextPage<Props> = ({ error, reset }) => {
+const ErrorPage: FC<Props> = ({ error, reset }) => {
   useEffect(() => {
     console.log(error);
   }, [error]);

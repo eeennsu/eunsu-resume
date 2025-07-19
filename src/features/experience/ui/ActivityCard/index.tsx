@@ -9,7 +9,6 @@ import { ICompanyExperience } from '@entities/experience/types';
 type Props = ICompanyExperience['activities'][number];
 
 const ActivityCard: FC<Props> = ({ title, startDate, endDate, estimatedDuration, doneList }) => {
-  console.log('estimatedDuration', estimatedDuration);
   return (
     <div className='flex flex-col gap-3.5 border-b border-gray-400 pb-10 last:border-none last:pb-0'>
       <div className='flex flex-col gap-1 md:flex-row md:justify-between md:gap-4'>

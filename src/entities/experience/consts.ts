@@ -9,6 +9,8 @@ export const EXPERIENCES: ICompanyExperience[] = [
         startDate: '2025.07.03',
         title: '타사의 여행 컨텐츠 예약 및 결제 시스템의 관리자 페이지 개발',
         doneList: [],
+        // v0 이용해 화면 기획부터 참여하여 디자인 구현
+        // 삭제가 불가능한 패키지들 (수정폼에서, 기존 데이터들이 있는 패키지들은 id 값으로 유무를 판단, 또한 react hook form의 form field array와의 id 가 겹치는 문제 해결)
       },
       {
         startDate: '2025.04.14',

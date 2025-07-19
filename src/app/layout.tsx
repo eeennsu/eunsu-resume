@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/eunsu-resume/favicon.ico',
   },
+  verification: {
+    google: '-gVPli_Efm-GOJTalY42H0Wtz_NhSRCUZleJ8MuQRmU',
+  },
 };
 
 export default function RootLayout({

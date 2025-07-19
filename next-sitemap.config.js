@@ -9,7 +9,7 @@ const config = {
     return {
       loc: `${config.siteUrl}/eunsu-resume${url}`,
       changefreq: 'monthly',
-      priority: 0.7,
+      priority: 1.0,
       lastmod: new Date().toISOString(),
       alternateRefs: [],
     };

@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   },
   keywords:
     '프론트엔드 개발자, 방은수, 이력서, 포트폴리오, Bang Eunsu, React.js, React, Next.js, Next, Typescript, ts, Javascript, js, Frontend Developer, Resume, Portfolio',
+  icons: {
+    icon: '/eunsu-resume/favicon.ico',
+  },
 };
 
 export default function RootLayout({

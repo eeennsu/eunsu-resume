@@ -5,6 +5,8 @@ const config = {
   generateIndexSitemap: true,
   sitemapSize: 5000,
   outDir: './out',
+  changefreq: 'monthly',
+  priority: 1,
   transform: async (config, url) => {
     return {
       loc: `${config.siteUrl}/eunsu-resume${url}`,

@@ -33,6 +33,6 @@ export const SKILL = [
   },
   {
     category: 'Tools',
-    items: ['VS Code', 'Git & GitHub', 'Jira', 'Notion', 'Figma', 'Slack'],
+    items: ['Git & GitHub', 'Jira', 'Notion', 'Figma', 'Slack'],
   },
 ];

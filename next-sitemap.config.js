@@ -7,15 +7,6 @@ const config = {
   outDir: './out',
   changefreq: 'monthly',
   priority: 1,
-  transform: async (config, url) => {
-    return {
-      loc: `${config.siteUrl}/eunsu-resume${url}`,
-      changefreq: 'monthly',
-      priority: 1.0,
-      lastmod: new Date().toISOString(),
-      alternateRefs: [],
-    };
-  },
 };
 
 export default config;

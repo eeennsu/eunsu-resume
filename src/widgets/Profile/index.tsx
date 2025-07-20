@@ -8,25 +8,26 @@ import { PROFILE } from '@entities/profile/consts';
 
 const ProfileWidget: FC = () => {
   return (
-    <section className='w-full pt-5 md:py-6'>
+    <section className='w-full pt-6 md:py-10'>
       <ProfileHeader />
-      <div className='flex flex-col px-4 text-center md:mx-auto md:flex-row md:justify-between md:px-10 md:text-left'>
-        <div className='flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start md:gap-14'>
-          <figure className='relative max-w-48 shrink-0 md:max-w-52'>
+
+      <div className='flex flex-col gap-8 px-6 md:mx-auto md:max-w-6xl md:flex-row md:justify-between md:px-12'>
+        <div className='flex flex-col items-center gap-6 md:flex-row md:items-start'>
+          <figure className='relative w-40 shrink-0 md:w-48'>
             <img
               src='images/profile.jpg'
               alt='profile'
-              className='w-full rounded-xl object-cover shadow-md'
+              className='w-full rounded-2xl object-cover shadow'
             />
           </figure>
 
-          <div className='flex flex-col gap-3 md:gap-6'>
-            <div>
+          <div className='flex flex-col items-center gap-5 md:items-start'>
+            <div className='text-center md:text-left'>
               <h1 className='font-serif text-3xl font-semibold text-gray-900'>{PROFILE.name}</h1>
-              <p className='text-md text-gray-500'>{PROFILE.birthDay}</p>
+              <p className='mt-1 text-gray-500'>{PROFILE.birthDay}</p>
             </div>
 
-            <div className='flex flex-col gap-3 text-sm md:text-base'>
+            <div className='flex flex-col gap-2 text-sm text-gray-700 md:text-base'>
               {PROFILE.descriptions.map((description, index) => (
                 <ProfileItem
                   key={index}
@@ -40,7 +41,10 @@ const ProfileWidget: FC = () => {
             </div>
           </div>
         </div>
-        <LastUpdate />
+
+        <div className='flex justify-center md:justify-end'>
+          <LastUpdate />
+        </div>
       </div>
     </section>
   );

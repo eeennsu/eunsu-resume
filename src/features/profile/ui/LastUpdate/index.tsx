@@ -8,34 +8,44 @@ import apiGetBranchCommitDate from '@features/github/apis/getBranchCommitDate';
 const LastUpdate: FC = () => {
   const [commitDate, setCommitDate] = useState<Dayjs | null>(null);
 
+  const setDefaultCommitDate = (date: string | Dayjs) => {
+    setCommitDate(dayjs(date).subtract(14, 'days'));
+  };
+
   useEffect(() => {
     const fetchBranchData = async () => {
       try {
         const isoDate = await apiGetBranchCommitDate();
 
-        setCommitDate(isoDate ? dayjs(isoDate) : dayjs().subtract(14, 'days'));
+        if (!isoDate) {
+          setDefaultCommitDate(dayjs());
+          return;
+        }
+
+        setCommitDate(dayjs(isoDate));
       } catch (error) {
         console.log(error);
-        setCommitDate(dayjs().subtract(14, 'days'));
+        setDefaultCommitDate(dayjs());
       }
     };
 
     fetchBranchData();
   }, []);
 
-  const formattedDate = commitDate ? commitDate.format('YYYY-MM-DD') : null;
+  const formattedDate = commitDate ? commitDate.format('YYYY.MM.DD') : null;
   const dayDiff = commitDate ? dayjs().startOf('day').diff(commitDate.startOf('day'), 'day') : null;
 
   return (
-    <div className='mt-8 flex flex-col items-center text-sm md:mt-14'>
-      <p className='w-full text-sm font-semibold md:text-right'>마지막 업데이트</p>
-      {formattedDate && (
-        <span className='font-semibold tracking-tight'>
-          {formattedDate} (D {dayDiff! > 0 ? `+${dayDiff}` : '- Day'})
-        </span>
-      )}
-
-      <i className='mt-1 text-xs text-gray-500'>Powered by GitHub API</i>
+    <div className='mt-8 flex h-fit flex-col items-end gap-1 rounded-md bg-gray-100 px-4 py-2 text-sm md:mt-14'>
+      <div className='flex w-fit items-center gap-2'>
+        <p className='text-sm text-gray-800 md:text-right'>마지막 업데이트</p>
+        {formattedDate && (
+          <span className='font-semibold tracking-tight'>
+            {formattedDate} (D {dayDiff! > 0 ? `+${dayDiff}` : '- Day'})
+          </span>
+        )}
+      </div>
+      <i className='text-xs text-gray-500'>Powered by GitHub API</i>
     </div>
   );
 };

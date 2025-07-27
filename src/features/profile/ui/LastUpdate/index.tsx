@@ -32,20 +32,19 @@ const LastUpdate: FC = () => {
     fetchBranchData();
   }, []);
 
-  const formattedDate = commitDate ? commitDate.format('YYYY.MM.DD') : null;
+  const formattedDate = commitDate ? commitDate.format('YYYY-MM-DD') : null;
   const dayDiff = commitDate ? dayjs().startOf('day').diff(commitDate.startOf('day'), 'day') : null;
 
   return (
-    <div className='mt-8 flex h-fit flex-col items-end gap-1 rounded-md bg-gray-100 px-4 py-2 text-sm md:mt-14'>
-      <div className='flex w-fit items-center gap-2'>
-        <p className='text-sm text-gray-800 md:text-right'>마지막 업데이트</p>
+    <div className='mt-8 flex h-fit flex-col items-end rounded-md px-4 py-2 text-sm md:mt-14'>
+      <div className='flex w-full flex-row items-center md:flex-col'>
         {formattedDate && (
           <span className='font-semibold tracking-tight'>
-            {formattedDate} (D {dayDiff! > 0 ? `+${dayDiff}` : '- Day'})
+            {formattedDate} (D {dayDiff! > 0 ? `+ ${dayDiff}` : '- Day'})
           </span>
         )}
+        <p className='text-xs text-gray-800 md:text-right'>마지막 업데이트</p>
       </div>
-      <i className='text-xs text-gray-500'>Powered by GitHub API</i>
     </div>
   );
 };
